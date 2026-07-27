@@ -1,1 +1,76 @@
-mostrar('oi')
+// ===================================================
+// JLScript - test.jls
+// Exemplo oficial da linguagem
+// ===================================================
+
+import #math;
+
+func principal() {
+
+    mostrar("================================");
+    mostrar("       Bem-vindo à JLScript");
+    mostrar("================================");
+    mostrar("");
+
+    let nome = chat("Digite seu nome: ");
+
+    mostrar("Olá, " + nome + "!");
+    mostrar("");
+
+    let idade = int(chat("Digite sua idade: "));
+
+    se (idade >= 18) {
+
+        mostrar("Você é maior de idade.");
+
+    } senao {
+
+        mostrar("Você é menor de idade.");
+
+    }
+
+    mostrar("");
+    mostrar("Contagem:");
+
+    repita(let i = 1; i <= 5; i++) {
+
+        mostrar(i);
+
+    }
+
+    mostrar("");
+
+    let numero = math.random(1, 100);
+
+    mostrar("Número aleatório:");
+    mostrar(numero);
+
+    mostrar("");
+
+    let soma = 10 + 5;
+    let sub = 10 - 5;
+    let mult = 10 * 5;
+    let div = 10 / 5;
+
+    mostrar("10 + 5 = " + soma);
+    mostrar("10 - 5 = " + sub);
+    mostrar("10 * 5 = " + mult);
+    mostrar("10 / 5 = " + div);
+
+    mostrar("");
+
+    let frutas = [
+        "Maçã",
+        "Banana",
+        "Laranja"
+    ];
+
+    mostrar("Lista de frutas:");
+    mostrar(frutas);
+
+    mostrar("");
+    mostrar("Teste concluído com sucesso!");
+
+}
+
+principal();
