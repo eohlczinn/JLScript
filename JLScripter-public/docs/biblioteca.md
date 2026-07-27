@@ -1,115 +1,160 @@
-# #api
+# 📚 Bibliotecas na JLScript
 
-**Nome:** API
-**Versão:** 1.0.0
-**Autor:** JLScript Team
-**Categoria:** Rede
-**Licença:** MIT
+As bibliotecas permitem adicionar novas funcionalidades aos seus projetos de forma simples e organizada.
 
 ---
 
-# Descrição
+# Importando uma biblioteca
 
-A biblioteca `#api` permite realizar requisições HTTP e consumir APIs REST.
-
----
-
-# Instalação
-
-```bash
-jls lib install api
-```
-
----
-
-# Importação
+Use o comando `import` seguido do nome da biblioteca.
 
 ```jls
 import #api
 ```
 
-## Com apelido
+---
+
+# Importando com apelido
+
+É possível criar um apelido para facilitar o uso da biblioteca.
 
 ```jls
 import #api como #ap
 ```
 
----
-
-# Funções
-
-## get()
+ou
 
 ```jls
-va res = #api.get(url)
+import #api ap #ap
 ```
 
-Descrição...
-
----
-
-## post()
+Após a importação:
 
 ```jls
-#api.post(url, dados)
-```
-
-Descrição...
-
----
-
-## put()
-
-...
-
----
-
-# Objetos
-
-## Response
-
-```jls
-res.status
-res.body
-res.headers
-res.ok
+#ap.get("https://api.exemplo.com")
 ```
 
 ---
 
-# Exemplos
+# Regra do caractere #
+
+Toda biblioteca na JLScript deve utilizar o prefixo `#`.
+
+Exemplos:
 
 ```jls
 import #api
-
-va res = #api.get(
-    "https://api.site.com"
-)
-
-mostrar(res.body)
+import #json
+import #math
+import #file
 ```
 
----
-
-# Tratamento de erros
+O mesmo vale para apelidos.
 
 ```jls
-tente{
+import #api como #ap
+```
 
-    ...
+Uso:
 
-}
-pegue(erro){
+```jls
+#ap.get(...)
+```
 
-    mostrar(erro)
+Essa regra evita conflitos entre bibliotecas, variáveis, funções e classes.
 
-}
+---
+
+# Instalando bibliotecas
+
+```bash
+jls lib install api
+```
+
+Atualizar:
+
+```bash
+jls lib update api
+```
+
+Atualizar todas:
+
+```bash
+jls lib update
+```
+
+Remover:
+
+```bash
+jls lib uninstall api
+```
+
+Listar bibliotecas instaladas:
+
+```bash
+jls lib list
 ```
 
 ---
 
-# Changelog
+# Bibliotecas oficiais
 
-## 1.0.0
+A JLScript possui bibliotecas oficiais desenvolvidas e mantidas pelo projeto.
 
-- Primeira versão.
+Exemplos:
+
+- `#api`
+- `#json`
+- `#math`
+- `#file`
+- `#time`
+- `#crypto`
+- `#os`
+- `#http`
+
+---
+
+# Bibliotecas da comunidade
+
+Também é possível instalar bibliotecas criadas pela comunidade através do gerenciador de pacotes da JLScript.
+
+Exemplo:
+
+```bash
+jls lib install minha-biblioteca
+```
+
+Importação:
+
+```jls
+import #minha-biblioteca
+```
+
+---
+
+# Boas práticas
+
+- Utilize nomes curtos e descritivos.
+- Sempre utilize o prefixo `#`.
+- Utilize apelidos apenas quando necessário.
+- Evite criar bibliotecas com nomes já utilizados pelas bibliotecas oficiais.
+- Mantenha sua biblioteca documentada e versionada.
+
+---
+
+# Exemplo completo
+
+```jls
+import #api como #ap
+
+va resposta =
+    #ap.get(
+        "https://api.exemplo.com/users"
+    )
+
+mostrar(resposta.body)
+```
+
+---
+
+© JLScript Team
