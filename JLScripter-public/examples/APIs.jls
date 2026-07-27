@@ -1,0 +1,121 @@
+// ===================================================
+// JLScript - api.jls
+// Exemplos de consumo de APIs
+// ===================================================
+
+import #http;
+import #json;
+
+mostrar("=== APIs na JLScript ===");
+mostrar("");
+
+// --------------------------------------
+// REQUISIÇÃO GET
+// --------------------------------------
+
+let resposta = http.get(
+    "https://jsonplaceholder.typicode.com/users/1"
+);
+
+mostrar("Status:");
+mostrar(resposta.status);
+
+mostrar("");
+
+// --------------------------------------
+// LENDO JSON
+// --------------------------------------
+
+let usuario = json.parse(resposta.body);
+
+mostrar("Nome:");
+mostrar(usuario.name);
+
+mostrar("Email:");
+mostrar(usuario.email);
+
+mostrar("");
+
+// --------------------------------------
+// REQUISIÇÃO POST
+// --------------------------------------
+
+let dados = {
+
+    nome: "Lucas",
+    idade: 19
+
+};
+
+let envio = http.post(
+    "https://jsonplaceholder.typicode.com/users",
+    json.stringify(dados)
+);
+
+mostrar("Status do POST:");
+mostrar(envio.status);
+
+mostrar("");
+
+// --------------------------------------
+// CABEÇALHOS
+// --------------------------------------
+
+let respostaApi = http.get(
+    "https://api.exemplo.com/users",
+    {
+        Authorization: "Bearer TOKEN",
+        Accept: "application/json"
+    }
+);
+
+mostrar("Status:");
+mostrar(respostaApi.status);
+
+mostrar("");
+
+// --------------------------------------
+// TRATAMENTO DE ERRO
+// --------------------------------------
+
+se (resposta.status == 200) {
+
+    mostrar("Requisição realizada com sucesso.");
+
+} senao {
+
+    mostrar("Erro ao acessar a API.");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// EXEMPLO COMPLETO
+// --------------------------------------
+
+func buscarUsuario(id) {
+
+    let resposta = http.get(
+        "https://jsonplaceholder.typicode.com/users/" + id
+    );
+
+    se (resposta.status == 200) {
+
+        let usuario = json.parse(resposta.body);
+
+        mostrar("Nome: " + usuario.name);
+        mostrar("Email: " + usuario.email);
+
+    } senao {
+
+        mostrar("Usuário não encontrado.");
+
+    }
+
+}
+
+buscarUsuario(1);
+
+mostrar("");
+mostrar("Fim dos testes de APIs.");
