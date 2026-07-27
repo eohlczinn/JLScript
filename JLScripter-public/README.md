@@ -1,40 +1,41 @@
 <div align="center">
 
-# JLScript
+# 🚀 JLScript
 
 ### A linguagem moderna feita para criar o futuro.
 
-Uma linguagem de programação moderna, simples e poderosa, desenvolvida em **C++** para oferecer alta performance, sintaxe intuitiva e uma excelente experiência para desenvolvedores.
+Uma linguagem de programação moderna desenvolvida em **C++**, criada para oferecer simplicidade, desempenho e produtividade.
 
-> 🚧 O projeto ainda está em desenvolvimento.
-
----
+> ⚠️ JLScript ainda está em desenvolvimento. Recursos podem mudar entre versões.
 
 ![Version](https://img.shields.io/badge/version-0.1.0--alpha-blue)
+![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-orange)
 ![Language](https://img.shields.io/badge/C%2B%2B-17-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-green)
-![License](https://img.shields.io/badge/license-MIT-yellow)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-success)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
 
 ---
 
-# ✨ Sobre
+# 📖 Sobre
 
-JLScript é uma linguagem de programação criada com o objetivo de ser simples para iniciantes e poderosa para projetos reais.
+JLScript é uma linguagem de programação moderna desenvolvida em C++, criada para ser simples para iniciantes e poderosa para aplicações reais.
 
-Ela está sendo desenvolvida em C++ e possui uma sintaxe moderna inspirada em linguagens como JavaScript, Python e C++, mas com identidade própria.
+O projeto possui sintaxe intuitiva, biblioteca padrão própria e uma arquitetura planejada para evoluir continuamente.
 
-## Objetivos
+---
 
-- Simplicidade
-- Alta Performance
-- Sintaxe Moderna
-- Desenvolvimento rápido
-- Biblioteca padrão organizada
-- CLI própria
-- Extensão oficial para VS Code
-- Evolução constante
+# ✨ Recursos
+
+- 🚀 Alta performance
+- 🧠 Sintaxe simples
+- 📚 Biblioteca padrão
+- 📦 Sistema de módulos
+- 💻 CLI própria
+- 📝 Documentação oficial
+- 🔧 Extensão para VS Code *(em desenvolvimento)*
+- 🌐 Multiplataforma
 
 ---
 
@@ -50,9 +51,22 @@ func principal() {
 
 ---
 
+# 📂 Estrutura
+
+```
+docs/
+examples/
+libs/
+README.md
+LICENSE
+teste.jls
+```
+
+---
+
 # 📚 Documentação
 
-A documentação está disponível na pasta:
+A documentação oficial está disponível na pasta:
 
 ```
 docs/
@@ -60,7 +74,7 @@ docs/
 
 Incluindo:
 
-- Instalação
+- Introdução
 - Sintaxe
 - Tipos
 - Funções
@@ -69,22 +83,9 @@ Incluindo:
 
 ---
 
-# 📂 Estrutura
+# 📁 Exemplos
 
-```
-docs/
-examples/
-libs/
-teste.jls
-README.md
-LICENSE
-```
-
----
-
-# 📖 Exemplos
-
-Na pasta `examples/` existem diversos exemplos:
+Na pasta `examples/` você encontrará exemplos de:
 
 - Olá Mundo
 - Variáveis
@@ -96,7 +97,7 @@ Na pasta `examples/` existem diversos exemplos:
 
 # 📦 Bibliotecas
 
-Bibliotecas oficiais ficam em:
+Bibliotecas oficiais disponíveis em:
 
 ```
 libs/
@@ -112,16 +113,16 @@ math/
 
 # 🛣️ Roadmap
 
-## Concluído
+## ✅ Concluído
 
 - Lexer
 - Parser
 - AST
 - Interpretador
-- Biblioteca padrão inicial
-- Documentação
+- Documentação inicial
+- Biblioteca padrão básica
 
-## Em desenvolvimento
+## 🔄 Em desenvolvimento
 
 - Classes
 - Package Manager
@@ -130,36 +131,38 @@ math/
 - Gerenciador de dependências
 - CLI completa
 
-## Futuro
+## 🔮 Futuro
 
-- IDE própria
+- IDE oficial
 - Web Framework
+- API para IA
+- Game Development
 - Mobile
-- Game Engine API
-- IA integrada
 
 ---
 
 # 🤝 Contribuindo
 
-Atualmente o desenvolvimento principal da JLScript é mantido pelo autor.
+No momento o desenvolvimento principal da JLScript é mantido pelo autor.
 
-Relatórios de bugs, sugestões e feedback são sempre bem-vindos.
+Sugestões, melhorias e relatos de bugs são sempre bem-vindos através das Issues do GitHub.
 
 ---
 
-# 📄 Licença
+# 📜 Licença
 
-Este projeto está licenciado sob a licença MIT.
+Este projeto está licenciado sob a **MIT License**.
 
-Veja o arquivo LICENSE para mais informações.
+Consulte o arquivo **LICENSE** para mais informações.
 
 ---
 
 <div align="center">
 
-### Desenvolvido por Lucas
+## Desenvolvido por Lucas
 
 **JLScript © 2026**
+
+⭐ Se você gostou do projeto, considere deixar uma estrela no repositório.
 
 </div>
