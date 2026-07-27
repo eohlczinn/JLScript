@@ -1,53 +1,115 @@
-📄 biblioteca.md
-Serve para:
+# #api
 
-Documentar as bibliotecas padrão da linguagem.
+**Nome:** API
+**Versão:** 1.0.0
+**Autor:** JLScript Team
+**Categoria:** Rede
+**Licença:** MIT
 
-Biblioteca é código que já vem pronto dentro do JLScript.
+---
 
-Em vez de criar tudo do zero:
+# Descrição
 
-calcularRaiz(numero)
+A biblioteca `#api` permite realizar requisições HTTP e consumir APIs REST.
 
-a linguagem já oferece.
+---
 
-Exemplo:
+# Instalação
 
-Biblioteca matemática
-importar math
+```bash
+jls lib install api
+```
 
-math.raiz(25)
-Biblioteca de console
-importar console
+---
 
-console.limpar()
-Biblioteca de arquivos
-importar file
+# Importação
 
-file.ler("texto.txt")
+```jls
+import #api
+```
 
-Esse arquivo explicaria:
+## Com apelido
 
-quais bibliotecas existem;
-quais funções cada uma possui;
-exemplos de uso.
+```jls
+import #api como #ap
+```
 
-A organização ficaria assim:
+---
 
-Manual JLScript
+# Funções
 
-começo.md
-│
-├── A pessoa aprende o básico
-│
-sintaxe.md
-│
-├── Aprende a escrever código
-│
-funções.md
-│
-├── Aprende a criar comandos próprios
-│
-biblioteca.md
-│
-└── Aprende recursos prontos
+## get()
+
+```jls
+va res = #api.get(url)
+```
+
+Descrição...
+
+---
+
+## post()
+
+```jls
+#api.post(url, dados)
+```
+
+Descrição...
+
+---
+
+## put()
+
+...
+
+---
+
+# Objetos
+
+## Response
+
+```jls
+res.status
+res.body
+res.headers
+res.ok
+```
+
+---
+
+# Exemplos
+
+```jls
+import #api
+
+va res = #api.get(
+    "https://api.site.com"
+)
+
+mostrar(res.body)
+```
+
+---
+
+# Tratamento de erros
+
+```jls
+tente{
+
+    ...
+
+}
+pegue(erro){
+
+    mostrar(erro)
+
+}
+```
+
+---
+
+# Changelog
+
+## 1.0.0
+
+- Primeira versão.
