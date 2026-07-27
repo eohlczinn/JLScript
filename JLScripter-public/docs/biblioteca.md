@@ -31,7 +31,7 @@ import #api ap #ap
 Após a importação:
 
 ```jls
-#ap.get("https://api.exemplo.com")
+ap.get("https://api.exemplo.com")
 ```
 
 ---
@@ -58,7 +58,7 @@ import #api como #ap
 Uso:
 
 ```jls
-#ap.get(...)
+ap.get(...)
 ```
 
 Essa regra evita conflitos entre bibliotecas, variáveis, funções e classes.
@@ -148,7 +148,7 @@ import #minha-biblioteca
 import #api como #ap
 
 va resposta =
-    #ap.get(
+    ap.get(
         "https://api.exemplo.com/users"
     )
 
