@@ -1,216 +1,114 @@
-# Biblioteca padrão JLScript
+# 🌍 Bibliotecas Open Source
 
-A biblioteca padrão do JLScript contém recursos que já vêm incluídos
-na linguagem.
+A JLScript incentiva a criação e o compartilhamento de bibliotecas open source pela comunidade.
 
-Ela permite realizar tarefas comuns sem precisar criar tudo do zero.
+Qualquer desenvolvedor pode criar, publicar e manter bibliotecas compatíveis com a JLScript.
 
-As bibliotecas podem ser importadas usando:
+---
+
+# Objetivo
+
+As bibliotecas permitem expandir as funcionalidades da linguagem sem modificar seu núcleo.
+
+Elas podem ser utilizadas em projetos pessoais, comerciais ou educacionais.
+
+---
+
+# Publicando uma biblioteca
+
+Após desenvolver sua biblioteca, publique-a em um repositório Git (como GitHub) e registre-a no gerenciador de pacotes da JLScript.
+
+Exemplo:
+
+```bash
+jls lib publish
+```
+
+---
+
+# Instalando
+
+```bash
+jls lib install nome-da-biblioteca
+```
+
+---
+
+# Importando
 
 ```jls
-importar nome_da_biblioteca
-Console
+import #nome-da-biblioteca
+```
 
-Biblioteca responsável por interação com o terminal.
+Com apelido:
 
-Arquivo interno:
+```jls
+import #nome-da-biblioteca como #lib
+```
 
-src/std/console.cpp
-Funções
-mostrar()
+---
 
-Exibe informações na tela.
+# Estrutura recomendada
 
-Exemplo:
+```
+minha-biblioteca/
+├── src/
+├── examples/
+├── tests/
+├── README.md
+├── LICENSE
+├── manifest.json
+└── CHANGELOG.md
+```
 
-mostrar("Olá JLScript")
+---
 
-Saída:
+# Manifesto
 
-Olá JLScript
-Math
-
-Biblioteca de operações matemáticas.
-
-Arquivo interno:
-
-src/std/math.cpp
-
-Usada para cálculos e operações numéricas.
-
-Possíveis operações:
-
-soma
-subtração
-multiplicação
-divisão
-arredondamentos
-potência
-raiz
-
-Exemplo futuro:
-
-importar math
-
-va resultado = math.raiz(25)
-
-mostrar(resultado)
-
-Saída:
-
-5
-Random
-
-Biblioteca para geração de valores aleatórios.
-
-Arquivo interno:
-
-src/std/random.cpp
-
-Usada para criar números aleatórios.
+Toda biblioteca deve possuir um arquivo `manifest.json`.
 
 Exemplo:
 
-importar random
+```json
+{
+  "name": "minha-biblioteca",
+  "version": "1.0.0",
+  "author": "Seu Nome",
+  "description": "Descrição da biblioteca.",
+  "license": "MIT"
+}
+```
 
-va numero = random.numero()
+---
 
-mostrar(numero)
+# Licença
 
-Pode ser usada para:
+Escolha uma licença open source compatível, como:
 
-jogos;
-sorteios;
-testes;
-simulações.
-NumAleatorio
+- MIT
+- Apache 2.0
+- BSD-3-Clause
+- GPL-3.0
 
-Biblioteca auxiliar para números aleatórios.
+---
 
-Arquivo interno:
+# Boas práticas
 
-src/std/numAleatorio.cpp
+- Escreva código limpo.
+- Documente todas as funções.
+- Utilize versionamento semântico.
+- Adicione exemplos de uso.
+- Escreva testes sempre que possível.
+- Evite quebrar compatibilidade entre versões.
 
-Responsável por funções específicas de geração de números.
+---
 
-Exemplo:
+# Comunidade
 
-va valor = aleatorio(1,100)
+Contribuições são bem-vindas.
 
-Resultado possível:
+Toda biblioteca publicada ajuda a fortalecer o ecossistema da JLScript e beneficia toda a comunidade.
 
-73
-File
+---
 
-Biblioteca para manipulação de arquivos.
-
-Arquivo interno:
-
-src/std/file.cpp
-
-Permite trabalhar com arquivos do computador.
-
-Possíveis recursos:
-
-criar arquivos;
-ler arquivos;
-escrever arquivos;
-verificar existência.
-
-Exemplo futuro:
-
-importar file
-
-file.escrever(
-    "teste.txt",
-    "Olá"
-)
-Time
-
-Biblioteca relacionada a tempo e datas.
-
-Arquivo interno:
-
-src/std/time.cpp
-
-Possui recursos como:
-
-obter horário atual;
-medir tempo;
-trabalhar com datas.
-
-Exemplo:
-
-importar time
-
-time.agora()
-String
-
-Biblioteca para manipulação de textos.
-
-Arquivo interno:
-
-src/std/string.cpp
-
-Recursos:
-
-tamanho de texto;
-alteração de caracteres;
-divisão de textos;
-união de textos.
-
-Exemplo:
-
-va nome = "JLScript"
-
-string.tamanho(nome)
-Array
-
-Biblioteca para trabalhar com listas.
-
-Arquivo interno:
-
-src/std/array.cpp
-
-Recursos:
-
-adicionar valores;
-remover valores;
-acessar posições;
-organizar listas.
-
-Exemplo:
-
-va numeros = [1,2,3]
-
-array.adicionar(numeros,4)
-Organização interna
-
-As bibliotecas ficam localizadas em:
-
-src/std/
-
-├── console.cpp
-├── file.cpp
-├── math.cpp
-├── random.cpp
-├── numAleatorio.cpp
-├── time.cpp
-├── string.cpp
-└── array.cpp
-Futuras bibliotecas
-
-Planejamento:
-
-rede (network)
-JSON
-banco de dados
-gráficos
-interface gráfica
-sistema operacional
-
-A biblioteca padrão tem como objetivo transformar o JLScript em uma linguagem completa,
-fornecendo ferramentas prontas para os programas.
-
-
-Eu deixaria esse arquivo como **versão 0.1 da documentação**. Depois, conforme você terminar cada função em
+**Desenvolvido para a comunidade. Compartilhado com a comunidade.**
