@@ -1,5 +1,155 @@
-func soma(a, b){
-    returne a + b;
+// ===================================================
+// JLScript - funcoes.jls
+// Exemplos de funções
+// ===================================================
+
+mostrar("=== Funções na JLScript ===");
+mostrar("");
+
+// --------------------------------------
+// FUNÇÃO SIMPLES
+// --------------------------------------
+
+func ola() {
+
+    mostrar("Olá, Mundo!");
+
 }
 
-mostrar(soma(10+10))
+ola();
+
+mostrar("");
+
+// --------------------------------------
+// FUNÇÃO COM PARÂMETRO
+// --------------------------------------
+
+func saudacao(nome) {
+
+    mostrar("Olá, " + nome + "!");
+
+}
+
+saudacao("Lucas");
+
+mostrar("");
+
+// --------------------------------------
+// FUNÇÃO COM MÚLTIPLOS PARÂMETROS
+// --------------------------------------
+
+func soma(a, b) {
+
+    retorne a + b;
+
+}
+
+let resultado = soma(10, 20);
+
+mostrar("10 + 20 = " + resultado);
+
+mostrar("");
+
+// --------------------------------------
+// RETORNO DE VALOR
+// --------------------------------------
+
+func dobro(numero) {
+
+    retorne numero * 2;
+
+}
+
+mostrar("Dobro de 15: " + dobro(15));
+
+mostrar("");
+
+// --------------------------------------
+// RETORNO ANTECIPADO
+// --------------------------------------
+
+func verificarIdade(idade) {
+
+    se (idade < 18) {
+
+        retorne "Menor de idade";
+
+    }
+
+    retorne "Maior de idade";
+
+}
+
+mostrar(verificarIdade(17));
+mostrar(verificarIdade(20));
+
+mostrar("");
+
+// --------------------------------------
+// FUNÇÃO SEM RETORNO
+// --------------------------------------
+
+func linha() {
+
+    mostrar("--------------------------");
+
+}
+
+linha();
+
+mostrar("Texto entre linhas");
+
+linha();
+
+mostrar("");
+
+// --------------------------------------
+// FUNÇÃO COM CÁLCULO
+// --------------------------------------
+
+func media(n1, n2, n3) {
+
+    retorne (n1 + n2 + n3) / 3;
+
+}
+
+let notaFinal = media(8, 9, 10);
+
+mostrar("Média: " + notaFinal);
+
+mostrar("");
+
+// --------------------------------------
+// FUNÇÃO CHAMANDO OUTRA
+// --------------------------------------
+
+func quadrado(numero) {
+
+    retorne numero * numero;
+
+}
+
+func exibirQuadrado(valor) {
+
+    mostrar("Quadrado: " + quadrado(valor));
+
+}
+
+exibirQuadrado(7);
+
+mostrar("");
+
+// --------------------------------------
+// EXEMPLO FINAL
+// --------------------------------------
+
+func principal() {
+
+    mostrar("Programa iniciado!");
+
+}
+
+principal();
+
+mostrar("");
+mostrar("Fim dos testes de funções.");
