@@ -1,182 +1,75 @@
-# JLScript (JLS)
+<p align="center">
+  <img src="assets/banner.png" alt="JLScript Banner">
+</p>
 
-## O que é a JLScript?
+<h1 align="center">JLScript</h1>
 
-A JLScript (JLS) é uma linguagem de programação moderna, simples e intuitiva, criada para facilitar o aprendizado e o desenvolvimento de aplicações.
+<p align="center">
+  <img src="assets/logo.png" width="160" alt="JLScript Logo">
+</p>
 
-Seu objetivo é oferecer uma sintaxe limpa, permitindo escrever código em português ou inglês, tornando a programação mais acessível sem perder desempenho e organização.
+<p align="center">
+  <b>Uma linguagem de programação moderna, simples e open source, criada no Brasil.</b>
+</p>
 
----
+<p align="center">
 
-# Filosofia
+![GitHub stars](https://img.shields.io/github/stars/SEU_USUARIO/JLScript?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/SEU_USUARIO/JLScript?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/SEU_USUARIO/JLScript?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)
 
-A JLScript foi criada seguindo alguns princípios:
-
-- Simplicidade
-- Legibilidade
-- Alto desempenho
-- Fácil aprendizado
-- Código organizado
-- Ecossistema open source
-
----
-
-# Características
-
-- Sintaxe em português e inglês
-- Interpretador próprio
-- CLI oficial
-- Gerenciador de pacotes
-- Sistema de bibliotecas
-- Imports com `#`
-- VS Code Extension
-- Código multiplataforma
-- Open Source
+</p>
 
 ---
 
-# Estrutura da linguagem
+# 🇧🇷 Sobre a JLScript
 
-## Variáveis
+A **JLScript (JLS)** é uma linguagem de programação moderna, intuitiva e open source desenvolvida no Brasil.
+
+Ela foi criada com o objetivo de facilitar o aprendizado da programação, aumentar a produtividade e construir um ecossistema totalmente desenvolvido utilizando a própria JLScript.
+
+---
+
+# ✨ Características
+
+- 🇧🇷 Sintaxe em português
+- 🇺🇸 Sintaxe em inglês
+- ⚡ Interpretador próprio
+- 📦 Gerenciador de pacotes
+- 📚 Bibliotecas escritas em JLScript
+- 🔌 Suporte a APIs
+- 🧩 Extensão oficial para VS Code
+- 🌎 Multiplataforma
+- ❤️ Open Source
+
+---
+
+# 🚀 Exemplo
 
 ```jls
-let nome = "Lucas";
-va idade = 19;
-ins PI = 3.14;
-```
+func principal() {
 
----
-
-## Saída
-
-```jls
-mostrar("Olá Mundo");
-```
-
----
-
-## Entrada
-
-```jls
-let nome = chat("Digite seu nome:");
-```
-
----
-
-## Condições
-
-```jls
-se (idade >= 18) {
-
-    mostrar("Maior");
-
-} senao {
-
-    mostrar("Menor");
+    mostrar("Olá, Mundo!");
 
 }
-```
 
-ou
-
-```jls
-if (idade >= 18) {
-
-    mostrar("Adult");
-
-} else {
-
-    mostrar("Minor");
-
-}
-```
-
-Não é permitido misturar os dois idiomas na mesma estrutura.
-
----
-
-## Loops
-
-```jls
-repita(let i = 0; i < 10; i++) {
-
-    mostrar(i);
-
-}
-```
-
-```jls
-enquanto(true) {
-
-    break;
-
-}
+principal();
 ```
 
 ---
 
-## Funções
+# 📦 Instalação
 
-```jls
-func soma(a, b) {
-
-    retorne a + b;
-
-}
+```bash
+jls version
 ```
 
----
+Criar um projeto
 
-## Bibliotecas
-
-```jls
-import #math;
-import #http;
-import #json;
+```bash
+jls new app MeuProjeto
 ```
-
-Com apelido:
-
-```jls
-import #math as #m;
-```
-
----
-
-## APIs
-
-```jls
-let resposta = #http.get(url);
-```
-
----
-
-## Conversão
-
-```jls
-int()
-float()
-str()
-bool()
-```
-
----
-
-# Organização do projeto
-
-```
-Projeto/
-
-src/
-docs/
-examples/
-runtime/
-packages/
-```
-
----
-
-# CLI
 
 Executar
 
@@ -184,145 +77,66 @@ Executar
 jls run app.jls
 ```
 
-Corrigir automaticamente
-
-```bash
-jls run app.jls --fix
-```
-
-Criar projeto
-
-```bash
-jls new app MeuProjeto
-```
-
-Criar biblioteca
-
-```bash
-jls new library MinhaLib
-```
-
-Instalar biblioteca
-
-```bash
-jls install mathplus
-```
-
-Atualizar bibliotecas
-
-```bash
-jls update
-```
-
-Publicar biblioteca
-
-```bash
-jls publish
-```
-
-Ver versão
-
-```bash
-jls version
-```
-
-Ajuda
-
-```bash
-jls help
-```
-
 ---
 
-# Sistema de Bibliotecas
-
-Toda biblioteca pode ser escrita utilizando a própria JLScript.
-
-Exemplo:
-
-```jls
-package {
-
-    nome: "mathplus",
-    versao: "1.0.0"
-
-}
-```
-
-Importação:
-
-```jls
-import #mathplus;
-```
-
----
-
-# Open Source
-
-A JLScript é um projeto open source desenvolvido para permitir que qualquer pessoa contribua com melhorias, bibliotecas e ferramentas para o ecossistema.
-
----
-
-# Ecossistema
-
-- Interpretador
-- Runtime
-- CLI
-- Package Manager
-- VS Code Extension
-- Documentação
-- Bibliotecas Oficiais
-- Bibliotecas da Comunidade
-
----
-
-# Roadmap
-
-- Arrays
-- Objetos
-- Classes
-- Interfaces
-- Módulos
-- Generics
-- Threads
-- Async/Await
-- Package Registry
-- Compilador JIT
-- LSP Oficial
-- Debugger
-- Testes automatizados
-
----
-
-# Exemplos
+# 📂 Estrutura
 
 ```
+docs/
 examples/
-├── olamundo.jls
-├── variaveis.jls
-├── funcoes.jls
-├── condicoes.jls
-├── loops.jls
-├── api.jls
-├── biblioteca.jls
+runtime/
+src/
+packages/
 ```
 
 ---
 
-# Licença
+# 📖 Documentação
+
+- Variáveis
+- Funções
+- Condições
+- Loops
+- Bibliotecas
+- APIs
+- Tipos
+- CLI
+
+---
+
+# 🎯 Objetivo
+
+A JLScript busca se tornar uma das principais linguagens de programação criadas no Brasil, incentivando inovação, educação e desenvolvimento open source.
+
+Nosso objetivo é mostrar que o Brasil também pode criar tecnologias relevantes para o mundo.
+
+---
+
+# 🤝 Contribuindo
+
+Toda contribuição é bem-vinda.
+
+Você pode ajudar com:
+
+- Correções
+- Novas funcionalidades
+- Bibliotecas
+- Documentação
+- Exemplos
+- Traduções
+
+---
+
+# 📜 Licença
 
 MIT License
 
 ---
 
-# Autor
+<p align="center">
 
-Lucas Aguiel Santos de Oliveira
+Desenvolvido com ❤️ no Brasil.
 
-Projeto iniciado em 2026.
+**JLScript © 2026**
 
----
-
-# Visão
-
-Criar uma linguagem de programação moderna, rápida, intuitiva e acessível, construída por uma comunidade open source e capaz de desenvolver aplicações reais utilizando bibliotecas escritas na própria JLScript.
+</p>
