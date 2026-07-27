@@ -1,0 +1,5 @@
+va a = 'String'
+let b = 10
+ins c = true, false
+
+lista arrays = [1,2,3,4,5]

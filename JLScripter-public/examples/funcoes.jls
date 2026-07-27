@@ -1,0 +1,5 @@
+func soma(a, b){
+    returne a + b;
+}
+
+mostrar(soma(10+10))

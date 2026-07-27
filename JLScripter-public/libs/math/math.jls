@@ -1,0 +1,6 @@
+import math
+
+
+mostrar(math.soma(10,5))
+
+mostrar(math.multiplicar(3,4))

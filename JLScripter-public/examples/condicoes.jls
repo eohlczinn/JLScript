@@ -1,0 +1,29 @@
+va idade = 10;
+
+if (idade >= 20) {  
+    mostrar('sim idade e maior ou igual a 20')
+};
+else{
+    mostrar('não idade não e maior ou igual a 20')
+};
+
+ins idade = 10
+
+se (idade >= 20) {  
+    mostrar('sim idade e maior ou igual a 20')
+};
+senao{
+    mostrar('não idade não e maior ou igual a 20')
+};
+
+let numero = 0;
+
+while (numero < 5) { 
+    mostrar(numero)
+    numero++
+ };
+
+ enquanto(numero < 5){
+    mostrar(numero)
+    numero++
+ }
