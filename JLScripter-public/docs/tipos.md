@@ -1,225 +1,208 @@
-# Tipos de dados JLScript
+# 🏷️ Tipos de Dados - JLScript
 
-Os tipos de dados definem quais valores uma variável pode armazenar.
+Os tipos de dados definem qual informação uma variável pode armazenar. A JLScript possui tipos simples, intuitivos e fáceis de utilizar.
 
-No JLScript, as variáveis possuem tipagem dinâmica, isso significa que o
-interpretador identifica o tipo automaticamente pelo valor recebido.
+---
 
-Exemplo:
+# String
 
-jls
+Armazena textos.
 
-va idade = 19
+```jls
+let nome = "Lucas";
+```
 
-O interpretador entende que:
+Também pode utilizar aspas simples.
 
-idade → número
-Número (Number)
+```jls
+let linguagem = 'JLScript';
+```
 
-Representa valores numéricos.
+---
 
-Pode ser usado para:
+# Integer (int)
 
-cálculos;
-contagens;
-operações matemáticas.
+Armazena números inteiros.
 
-Exemplo:
+```jls
+let idade = 19;
+```
 
-# va idade = 19
-# va altura = 1.75
+Exemplos
 
-Valores:
+```jls
+0
+10
+-25
+999
+```
 
-idade = 19
-altura = 1.75
+---
 
-Operações:
+# Float
 
-va soma = 10 + 5
-mostrar(soma)
+Armazena números com casas decimais.
 
-Resultado:
+```jls
+let altura = 1.75;
+```
 
-15
-Texto (String)
+Exemplos
 
-Representa uma sequência de caracteres.
+```jls
+3.14
+0.5
+-12.75
+```
 
-Textos devem estar entre aspas.
+---
 
-Exemplo:
+# Boolean
 
-va nome = "Lucas"
+Representa verdadeiro ou falso.
 
-O valor armazenado é:
+```jls
+let ativo = true;
+```
 
-nome → "Lucas"
+```jls
+let desligado = false;
+```
 
-Pode ser usado para:
+---
 
-nomes;
-mensagens;
-textos.
+# Null
 
-Exemplo:
+Representa a ausência de valor.
 
-mostrar("Olá mundo")
+```jls
+let usuario = null;
+```
 
-Saída:
+---
 
-Olá mundo
-Booleano (Boolean)
+# Array
 
-Representa valores de verdadeiro ou falso.
+Armazena vários valores em uma única variável.
 
-Possui dois valores:
+```jls
+let numeros = [1, 2, 3];
+```
 
-verdadeiro
-falso
+Também pode conter textos.
 
-Exemplo:
-
-va ligado = verdadeiro
-
-O interpretador guarda:
-
-ligado → true
-
-Muito usado em condições:
-
-va maior = verdadeiro
-
-se maior
-{
-    mostrar("Sim")
-}
-Nulo (Null)
-
-Representa ausência de valor.
-
-É usado quando uma variável existe, mas ainda não possui informação.
-
-Exemplo:
-
-va resultado = nulo
-
-Estado:
-
-resultado → vazio
-Array (Lista)
-
-Arrays armazenam vários valores dentro de uma única variável.
-
-Exemplo:
-
-va numeros = [1,2,3,4]
-
-Representação:
-
-numeros
-
-[
-  1
-  2
-  3
-  4
-]
-
-Podem armazenar vários tipos:
-
-va dados = [
+```jls
+let nomes = [
     "Lucas",
-    19,
-    verdadeiro
-]
-Objeto
+    "João",
+    "Maria"
+];
+```
 
-Objetos armazenam informações organizadas em propriedades.
+---
 
-Exemplo:
+# Object (Planejado)
 
-va pessoa =
-{
+Armazena informações em formato de chave e valor.
+
+```jls
+let pessoa = {
+
     nome: "Lucas",
     idade: 19
-}
 
-Representação:
-
-pessoa
-
-nome → Lucas
-idade → 19
-
-Objetos permitem criar estruturas mais complexas.
-
-Função
-
-Funções também podem ser consideradas valores.
-
-Elas armazenam blocos de código que podem ser executados.
-
-Exemplo:
-
-funcao mensagem()
-{
-    mostrar("Olá")
-}
-
-A função pode ser chamada:
-
-mensagem()
-Conversão de tipos
-
-Em alguns casos pode ser necessário transformar um tipo em outro.
-
-Exemplo:
-
-Número para texto:
-
-19
-↓
-"19"
-
-Texto para número:
-
-"50"
-↓
-50
-
-Essas conversões serão realizadas através das funções da biblioteca padrão.
-
-Resumo dos tipos
-Tipo	Exemplo	Uso
-Number	10	números e cálculos
-String	"Olá"	textos
-Boolean	verdadeiro	decisões
-Null	nulo	ausência de valor
-Array	[1,2,3]	listas
-Object	{nome:"Ana"}	dados organizados
-Function	funcao(){}	código reutilizável
-Tipos internos do interpretador
-
-Internamente o JLScript representa esses valores através do sistema de runtime.
-
-Local:
-
-src/runtime/
-
-Arquivos relacionados:
-
-value.hpp
-value.cpp
-object.hpp
-object.cpp
-
-O runtime é responsável por armazenar e manipular os valores durante a execução do programa.
-
+};
+```
 
 ---
 
+# Conversão de Tipos
+
+Converter para inteiro.
+
+```jls
+int("10");
+```
+
+Converter para decimal.
+
+```jls
+float("10.5");
+```
+
+Converter para texto.
+
+```jls
+str(10);
+```
+
+Converter para booleano.
+
+```jls
+bool(1);
+```
 
 ---
 
-Uma observação importante: pelo código que você mostrou antes, seu `Value` provavelmente ainda está nos tipos básicos (`number`, `string`, `boolean` etc.). Então **Array, Object e Function podem ficar documentados como recursos planejados** até você implementar no runtime. Melhor uma documentação menor e verdadeira do que uma enciclopédia de coisas que o interpretador ainda olha e fala "não faço ideia do que é isso". 😄
+# Descobrindo o Tipo
+
+Utilize `tipo()` para descobrir o tipo de um valor.
+
+```jls
+let nome = "Lucas";
+
+mostrar(tipo(nome));
+```
+
+Saída
+
+```text
+string
+```
+
+---
+
+# Exemplos
+
+```jls
+let nome = "Lucas";
+
+let idade = 19;
+
+let altura = 1.75;
+
+let estudante = true;
+
+let endereco = null;
+
+let notas = [10, 9, 8];
+```
+
+---
+
+# Tabela de Tipos
+
+| Tipo | Descrição | Exemplo |
+|------|-----------|----------|
+| string | Texto | `"Olá"` |
+| int | Número inteiro | `10` |
+| float | Número decimal | `3.14` |
+| bool | Verdadeiro ou falso | `true` |
+| null | Sem valor | `null` |
+| array | Lista de valores | `[1,2,3]` |
+| object | Chave e valor *(Planejado)* | `{ nome: "Lucas" }` |
+
+---
+
+# Boas Práticas
+
+- Utilize **string** para textos.
+- Utilize **int** para números inteiros.
+- Utilize **float** para números decimais.
+- Utilize **bool** para decisões lógicas.
+- Utilize **array** para armazenar coleções de dados.
+- Utilize **null** quando uma variável ainda não possuir valor.
+
+---
+
+> Os tipos da **JLScript** foram projetados para serem simples e familiares, inspirados em linguagens como JavaScript, Python e C++, mantendo uma sintaxe limpa e intuitiva.
