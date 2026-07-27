@@ -1,3 +1,19 @@
+// =====================================
+// JLScript - olamundo.jls
+// Primeiro programa
+// =====================================
 
+mostrar("Olá, Mundo!");
 
-mostrar('Ola, mundo)
+// =====================================
+// JLScript
+// Exemplo Oficial - Olá Mundo
+// =====================================
+
+func principal() {
+
+    mostrar("Olá, Mundo!");
+
+}
+
+principal();
