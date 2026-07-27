@@ -1,26 +1,112 @@
 # 📝 Sintaxe - JLScript
 
-A sintaxe da **JLScript** foi projetada para ser simples, intuitiva e fácil de aprender, utilizando palavras em português sempre que possível.
+A **JLScript** foi criada para ser uma linguagem simples, moderna e intuitiva. Ela permite escrever código em **português** ou **inglês**, facilitando tanto para iniciantes quanto para programadores experientes.
 
 ---
 
-# Olá Mundo
+# Idiomas da Sintaxe
+
+A JLScript possui duas sintaxes oficiais.
+
+## Português
 
 ```jls
-mostrar("Olá, Mundo!");
+se (idade >= 18) {
+
+    mostrar("Maior de idade");
+
+} senao {
+
+    mostrar("Menor de idade");
+
+}
 ```
+
+## Inglês
+
+```jls
+if (idade >= 18) {
+
+    print("Maior de idade");
+
+} else {
+
+    print("Menor de idade");
+
+}
+```
+
+---
+
+# Regras
+
+Você pode utilizar **português** ou **inglês**, porém **não pode misturar os dois na mesma estrutura**.
+
+### Correto
+
+```jls
+se (ativo) {
+
+    mostrar("OK");
+
+} senao {
+
+    mostrar("Erro");
+
+}
+```
+
+```jls
+if (ativo) {
+
+    print("OK");
+
+} else {
+
+    print("Erro");
+
+}
+```
+
+### Incorreto
+
+```jls
+if (ativo) {
+
+    print("OK");
+
+} senao {
+
+    print("Erro");
+
+}
+```
+
+```jls
+se (ativo) {
+
+    mostrar("OK");
+
+} else {
+
+    mostrar("Erro");
+
+}
+```
+
+> Misturar palavras-chave de idiomas diferentes gera erro de sintaxe.
 
 ---
 
 # Comentários
 
-Comentário de uma linha:
+Comentário de uma linha
 
 ```jls
-// Isto é um comentário
+// Comentário
 ```
 
-Comentário de múltiplas linhas:
+Comentário de múltiplas linhas
 
 ```jls
 /*
@@ -34,19 +120,19 @@ linhas
 
 # Variáveis
 
-Variável mutável:
+Variável mutável
 
 ```jls
 let nome = "Lucas";
 ```
 
-Outra forma de variável:
+Outra variável mutável
 
 ```jls
 va idade = 19;
 ```
 
-Constante:
+Constante
 
 ```jls
 ins PI = 3.14159;
@@ -54,7 +140,7 @@ ins PI = 3.14159;
 
 ---
 
-# Tipos de dados
+# Tipos de Dados
 
 ```jls
 let texto = "Olá";
@@ -70,11 +156,9 @@ let vazio = null;
 
 ---
 
-# Operadores
+# Operadores Matemáticos
 
-## Matemáticos
-
-```jls
+```text
 +
 -
 *
@@ -83,7 +167,7 @@ let vazio = null;
 **
 ```
 
-Exemplo:
+Exemplo
 
 ```jls
 mostrar(10 + 5);
@@ -91,9 +175,9 @@ mostrar(10 + 5);
 
 ---
 
-## Comparação
+# Operadores de Comparação
 
-```jls
+```text
 ==
 !=
 >
@@ -104,9 +188,9 @@ mostrar(10 + 5);
 
 ---
 
-## Lógicos
+# Operadores Lógicos
 
-```jls
+```text
 &&
 ||
 !
@@ -114,51 +198,57 @@ mostrar(10 + 5);
 
 ---
 
-# Entrada e saída
+# Entrada e Saída
 
-Mostrar informações:
+Mostrar informações
 
 ```jls
-mostrar("Olá");
+mostrar("Olá Mundo");
 ```
 
-Receber entrada:
+```jls
+print("Olá Mundo");
+```
+
+Receber entrada
 
 ```jls
 let nome = chat("Digite seu nome:");
+```
+
+```jls
+let nome = input("Digite seu nome:");
 ```
 
 ---
 
 # Condições
 
-```jls
-se (idade >= 18) {
-
-    mostrar("Maior de idade");
-
-}
-```
-
----
-
-## Senão
+Português
 
 ```jls
 se (idade >= 18) {
 
     mostrar("Maior");
 
-} senao {
+}
+```
 
-    mostrar("Menor");
+Inglês
+
+```jls
+if (idade >= 18) {
+
+    print("Maior");
 
 }
 ```
 
 ---
 
-## Senão se
+# Condição Completa
+
+Português
 
 ```jls
 se (nota >= 9) {
@@ -172,6 +262,24 @@ se (nota >= 9) {
 } senao {
 
     mostrar("Reprovado");
+
+}
+```
+
+Inglês
+
+```jls
+if (nota >= 9) {
+
+    print("Excelente");
+
+} else if (nota >= 6) {
+
+    print("Aprovado");
+
+} else {
+
+    print("Reprovado");
 
 }
 ```
@@ -199,7 +307,9 @@ switch(opcao){
 
 ---
 
-# Laço enquanto
+# Laço While
+
+Português
 
 ```jls
 enquanto(i < 10){
@@ -211,9 +321,23 @@ enquanto(i < 10){
 }
 ```
 
+Inglês
+
+```jls
+while(i < 10){
+
+    print(i);
+
+    i++;
+
+}
+```
+
 ---
 
-# Laço repita
+# Laço For
+
+Português
 
 ```jls
 repita(let i = 0; i < 10; i++){
@@ -223,9 +347,21 @@ repita(let i = 0; i < 10; i++){
 }
 ```
 
+Inglês
+
+```jls
+for(let i = 0; i < 10; i++){
+
+    print(i);
+
+}
+```
+
 ---
 
 # Funções
+
+Português
 
 ```jls
 func soma(a, b){
@@ -235,10 +371,20 @@ func soma(a, b){
 }
 ```
 
-Chamando:
+Inglês
 
 ```jls
-let resultado = soma(5, 10);
+function soma(a, b){
+
+    return a + b;
+
+}
+```
+
+Chamando
+
+```jls
+let resultado = soma(10, 5);
 
 mostrar(resultado);
 ```
@@ -247,13 +393,11 @@ mostrar(resultado);
 
 # Importação
 
-Importar biblioteca:
-
 ```jls
 import #math;
 ```
 
-Importar com apelido:
+Com apelido
 
 ```jls
 import #panda as #pd;
@@ -261,7 +405,7 @@ import #panda as #pd;
 
 ---
 
-# Conversões
+# Conversão de Tipos
 
 ```jls
 int(valor);
@@ -278,10 +422,10 @@ bool(valor);
 # Arrays (Planejado)
 
 ```jls
-let numeros = [1,2,3];
+let numeros = [1, 2, 3];
 ```
 
-Métodos planejados:
+Exemplos
 
 ```jls
 numeros.adicionar(10);
@@ -298,7 +442,7 @@ numeros.limpar();
 
 numeros.contem(5);
 
-numeros.indiceDe(3);
+numeros.indiceDe(5);
 
 numeros.inverter();
 
@@ -307,7 +451,7 @@ numeros.ordenar();
 
 ---
 
-# Estrutura de um programa
+# Estrutura de um Programa
 
 ```jls
 import #math;
@@ -327,30 +471,28 @@ principal();
 
 # Convenções
 
-- Utilize nomes descritivos.
-- Finalize instruções com `;`.
 - Utilize indentação de 4 espaços.
-- Organize funções em arquivos separados quando o projeto crescer.
-- Prefira constantes (`ins`) para valores que não mudam.
+- Finalize instruções com `;`.
+- Escolha apenas um idioma por estrutura.
+- Utilize nomes descritivos para variáveis e funções.
+- Organize o código em funções para facilitar a manutenção.
 
 ---
 
-# Resumo
+# Palavras-chave
 
-| Elemento | Sintaxe |
-|----------|---------|
-| Variável | `let nome = "";` |
-| Constante | `ins PI = 3.14;` |
-| Mostrar | `mostrar();` |
-| Entrada | `chat();` |
-| Função | `func nome(){}` |
-| Retorno | `retorne` |
-| Se | `se` |
-| Senão | `senao` |
-| Enquanto | `enquanto` |
-| Repita | `repita` |
-| Import | `import #biblioteca;` |
+| Português | Inglês |
+|-----------|---------|
+| se | if |
+| senao | else |
+| senao se | else if |
+| enquanto | while |
+| repita | for |
+| func | function |
+| retorne | return |
+| mostrar | print |
+| chat | input |
 
 ---
 
-> **JLScript** possui uma sintaxe moderna, legível e inspirada em linguagens como JavaScript, Python e C++, adaptada para o português e voltada à produtividade e ao aprendizado.
+> **JLScript** combina a simplicidade do português com a compatibilidade da sintaxe tradicional, permitindo escrever código da forma que você preferir, desde que cada estrutura utilize apenas um dos idiomas.
