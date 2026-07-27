@@ -1,3 +1,152 @@
-for (va i=0; i<10; i++) {
-    mostrar(i)
- };
+// ===================================================
+// JLScript - loops.jls
+// Exemplos de laços de repetição
+// ===================================================
+
+mostrar("=== Loops na JLScript ===");
+mostrar("");
+
+// --------------------------------------
+// ENQUANTO (WHILE)
+// --------------------------------------
+
+mostrar("Contagem com enquanto:");
+
+let i = 1;
+
+enquanto(i <= 5) {
+
+    mostrar(i);
+
+    i++;
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// REPITA (FOR)
+// --------------------------------------
+
+mostrar("Contagem com repita:");
+
+repita(let j = 1; j <= 5; j++) {
+
+    mostrar(j);
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// BREAK
+// --------------------------------------
+
+mostrar("Exemplo de break:");
+
+repita(let x = 1; x <= 10; x++) {
+
+    se (x == 6) {
+
+        break;
+
+    }
+
+    mostrar(x);
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// CONTINUE
+// --------------------------------------
+
+mostrar("Exemplo de continue:");
+
+repita(let y = 1; y <= 5; y++) {
+
+    se (y == 3) {
+
+        continue;
+
+    }
+
+    mostrar(y);
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// LOOP DECRESCENTE
+// --------------------------------------
+
+mostrar("Contagem regressiva:");
+
+repita(let n = 5; n >= 1; n--) {
+
+    mostrar(n);
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// LOOP COM PASSO
+// --------------------------------------
+
+mostrar("Números pares:");
+
+repita(let p = 0; p <= 10; p += 2) {
+
+    mostrar(p);
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// LOOP ANINHADO
+// --------------------------------------
+
+mostrar("Tabuada:");
+
+repita(let a = 1; a <= 3; a++) {
+
+    repita(let b = 1; b <= 5; b++) {
+
+        mostrar(a + " x " + b + " = " + (a * b));
+
+    }
+
+    mostrar("");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// LOOP INFINITO
+// --------------------------------------
+
+mostrar("Loop infinito interrompido:");
+
+let contador = 0;
+
+enquanto(true) {
+
+    mostrar(contador);
+
+    contador++;
+
+    se (contador >= 5) {
+
+        break;
+
+    }
+
+}
+
+mostrar("");
+mostrar("Fim dos testes de loops.");
