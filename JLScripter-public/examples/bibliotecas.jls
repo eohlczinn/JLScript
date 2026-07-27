@@ -1,0 +1,124 @@
+// ===================================================
+// JLScript - biblioteca.jls
+// Exemplos de importação de bibliotecas
+// ===================================================
+
+mostrar("=== Bibliotecas na JLScript ===");
+mostrar("");
+
+// --------------------------------------
+// IMPORTAÇÃO SIMPLES
+// --------------------------------------
+
+import #math;
+
+mostrar("Biblioteca Math importada.");
+
+mostrar("");
+
+// --------------------------------------
+// IMPORTAÇÃO COM APELIDO
+// --------------------------------------
+
+import #math as #m;
+
+mostrar("Math importada como #m.");
+
+mostrar("");
+
+// --------------------------------------
+// MÚLTIPLAS IMPORTAÇÕES
+// --------------------------------------
+
+import #http;
+import #json;
+import #time;
+import #os;
+
+mostrar("Bibliotecas carregadas.");
+
+mostrar("");
+
+// --------------------------------------
+// USANDO UMA BIBLIOTECA
+// --------------------------------------
+
+let numero = #math.random(1, 100);
+
+mostrar("Número aleatório:");
+mostrar(numero);
+
+mostrar("");
+
+// --------------------------------------
+// USANDO O APELIDO
+// --------------------------------------
+
+let raiz = #m.sqrt(144);
+
+mostrar("Raiz quadrada:");
+mostrar(raiz);
+
+mostrar("");
+
+// --------------------------------------
+// DATA E HORA
+// --------------------------------------
+
+mostrar("Hora atual:");
+mostrar(#time.now());
+
+mostrar("");
+
+// --------------------------------------
+// SISTEMA OPERACIONAL
+// --------------------------------------
+
+mostrar("Sistema:");
+mostrar(#os.platform());
+
+mostrar("");
+
+// --------------------------------------
+// REQUISIÇÃO HTTP
+// --------------------------------------
+
+let resposta = #http.get(
+    "https://jsonplaceholder.typicode.com/posts/1"
+);
+
+mostrar("Status:");
+mostrar(resposta.status);
+
+mostrar("");
+
+// --------------------------------------
+// JSON
+// --------------------------------------
+
+let dados = #json.parse(resposta.body);
+
+mostrar("Título:");
+mostrar(dados.title);
+
+mostrar("");
+
+// --------------------------------------
+// EXEMPLO COMPLETO
+// --------------------------------------
+
+func principal() {
+
+    import #math as #m;
+
+    let numero = #m.random(1, 10);
+
+    mostrar("Número sorteado:");
+    mostrar(numero);
+
+}
+
+principal();
+
+mostrar("");
+mostrar("Fim dos testes de bibliotecas.");
