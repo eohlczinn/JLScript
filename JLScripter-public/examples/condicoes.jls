@@ -1,29 +1,159 @@
-va idade = 10;
+// ===================================================
+// JLScript - condicoes.jls
+// Exemplos de estruturas condicionais
+// ===================================================
 
-if (idade >= 20) {  
-    mostrar('sim idade e maior ou igual a 20')
-};
-else{
-    mostrar('não idade não e maior ou igual a 20')
-};
+mostrar("=== Condições na JLScript ===");
+mostrar("");
 
-ins idade = 10
+// --------------------------------------
+// SE
+// --------------------------------------
 
-se (idade >= 20) {  
-    mostrar('sim idade e maior ou igual a 20')
-};
-senao{
-    mostrar('não idade não e maior ou igual a 20')
-};
+let idade = 20;
 
-let numero = 0;
+se (idade >= 18) {
 
-while (numero < 5) { 
-    mostrar(numero)
-    numero++
- };
+    mostrar("Você é maior de idade.");
 
- enquanto(numero < 5){
-    mostrar(numero)
-    numero++
- }
+}
+
+mostrar("");
+
+// --------------------------------------
+// SE / SENAO
+// --------------------------------------
+
+let nota = 5;
+
+se (nota >= 6) {
+
+    mostrar("Aprovado.");
+
+} senao {
+
+    mostrar("Reprovado.");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// SENAO SE
+// --------------------------------------
+
+let media = 8;
+
+se (media >= 9) {
+
+    mostrar("Excelente!");
+
+} senao se (media >= 7) {
+
+    mostrar("Bom!");
+
+} senao se (media >= 6) {
+
+    mostrar("Regular.");
+
+} senao {
+
+    mostrar("Insuficiente.");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// OPERADORES LÓGICOS
+// --------------------------------------
+
+let admin = true;
+let logado = true;
+
+se (admin && logado) {
+
+    mostrar("Painel administrativo liberado.");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+
+let vip = false;
+
+se (admin || vip) {
+
+    mostrar("Área Premium.");
+
+} senao {
+
+    mostrar("Área comum.");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+
+let bloqueado = false;
+
+se (!bloqueado) {
+
+    mostrar("Usuário ativo.");
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// CONDIÇÕES ANINHADAS
+// --------------------------------------
+
+let usuario = true;
+let premium = true;
+
+se (usuario) {
+
+    se (premium) {
+
+        mostrar("Bem-vindo, usuário Premium.");
+
+    } senao {
+
+        mostrar("Bem-vindo, usuário.");
+
+    }
+
+}
+
+mostrar("");
+
+// --------------------------------------
+// SWITCH
+// --------------------------------------
+
+let opcao = 2;
+
+switch(opcao) {
+
+    case 1:
+        mostrar("Opção 1");
+        break;
+
+    case 2:
+        mostrar("Opção 2");
+        break;
+
+    case 3:
+        mostrar("Opção 3");
+        break;
+
+    default:
+        mostrar("Opção inválida.");
+
+}
+
+mostrar("");
+mostrar("Fim dos testes.");
