@@ -1,5 +1,167 @@
-va a = 'String'
-let b = 10
-ins c = true, false
+// ===================================================
+// JLScript - variaveis.jls
+// Exemplos de variáveis
+// ===================================================
 
-lista arrays = [1,2,3,4,5]
+mostrar("=== Variáveis na JLScript ===");
+mostrar("");
+
+// --------------------------------------
+// LET
+// --------------------------------------
+
+let nome = "Lucas";
+
+mostrar("Nome:");
+mostrar(nome);
+
+mostrar("");
+
+// --------------------------------------
+// VA
+// --------------------------------------
+
+va idade = 19;
+
+mostrar("Idade:");
+mostrar(idade);
+
+mostrar("");
+
+// --------------------------------------
+// INS (Constante)
+// --------------------------------------
+
+ins PI = 3.141592;
+
+mostrar("PI:");
+mostrar(PI);
+
+mostrar("");
+
+// --------------------------------------
+// ALTERANDO UMA VARIÁVEL
+// --------------------------------------
+
+let numero = 10;
+
+mostrar("Valor inicial:");
+mostrar(numero);
+
+numero = 20;
+
+mostrar("Novo valor:");
+mostrar(numero);
+
+mostrar("");
+
+// --------------------------------------
+// STRING
+// --------------------------------------
+
+let linguagem = "JLScript";
+
+mostrar("Linguagem:");
+mostrar(linguagem);
+
+mostrar("");
+
+// --------------------------------------
+// INTEGER
+// --------------------------------------
+
+let ano = 2026;
+
+mostrar("Ano:");
+mostrar(ano);
+
+mostrar("");
+
+// --------------------------------------
+// FLOAT
+// --------------------------------------
+
+let altura = 1.75;
+
+mostrar("Altura:");
+mostrar(altura);
+
+mostrar("");
+
+// --------------------------------------
+// BOOLEAN
+// --------------------------------------
+
+let ativo = true;
+
+mostrar("Ativo:");
+mostrar(ativo);
+
+mostrar("");
+
+// --------------------------------------
+// NULL
+// --------------------------------------
+
+let usuario = null;
+
+mostrar("Usuário:");
+mostrar(usuario);
+
+mostrar("");
+
+// --------------------------------------
+// ARRAY
+// --------------------------------------
+
+let frutas = [
+    "Maçã",
+    "Banana",
+    "Laranja"
+];
+
+mostrar("Frutas:");
+mostrar(frutas);
+
+mostrar("");
+
+// --------------------------------------
+// CÁLCULO COM VARIÁVEIS
+// --------------------------------------
+
+let a = 10;
+let b = 5;
+
+let soma = a + b;
+let sub = a - b;
+let mult = a * b;
+let div = a / b;
+
+mostrar("Soma:");
+mostrar(soma);
+
+mostrar("Subtração:");
+mostrar(sub);
+
+mostrar("Multiplicação:");
+mostrar(mult);
+
+mostrar("Divisão:");
+mostrar(div);
+
+mostrar("");
+
+// --------------------------------------
+// CONCATENAÇÃO
+// --------------------------------------
+
+let primeiroNome = "Lucas";
+let sobrenome = "Oliveira";
+
+let nomeCompleto = primeiroNome + " " + sobrenome;
+
+mostrar("Nome completo:");
+mostrar(nomeCompleto);
+
+mostrar("");
+mostrar("Fim dos testes de variáveis.");
