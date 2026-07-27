@@ -1,9 +1,9 @@
 // ===================================================
-// JLScript - test.jls
+// JLScript - teste.jls
 // Exemplo oficial da linguagem
 // ===================================================
 
-import #math;
+importe #math;
 
 func principal() {
 
